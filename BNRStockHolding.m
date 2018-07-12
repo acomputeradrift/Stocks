@@ -30,9 +30,9 @@
 {
     return _numberOfShare;
 }
- - (void)setNumberOfShare:(float)p
+- (void)setNumberOfShare:(float)n;
 {
-    _numberOfShare= p;
+    _numberOfShare= n;
 }
 
 - (float)costInDollars;  // purchaseSharePrice * numberOfShares
@@ -43,4 +43,9 @@
 {
     return _currentSharePrice * _numberOfShare;
 }
+// - (NSString*) description
+//{
+//NSString *description = [NSString stringWithFormat:@"Number of Shares: %f\nPurchase Price: %.2f\nShare Price: %.2f\nCost: %.2f", [self numberOfShare], [self purchaseSharePrice], [self currentSharePrice], [self costInDollars]];
+//    return description;
+//}
 @end

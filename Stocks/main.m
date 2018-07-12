@@ -11,6 +11,9 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        
+        //set the parameters for each stock held
+        
         BNRStockHolding *Telus = [[BNRStockHolding alloc]init];
         [Telus setPurchaseSharePrice:100];
         [Telus setNumberOfShare:25];
@@ -26,17 +29,21 @@ int main(int argc, const char * argv[]) {
         [Rogers setNumberOfShare:10];
         [Rogers setCurrentSharePrice:276];
         
-        //        In main(), fill an array with three instances of BNRStockHolding. Then iterate through the array printing out the value of each.
-        
-        
+        //fill the array
+
         NSArray *allStocks = @[Telus, Bell, Rogers];
-        int count = 0;
-        for (NSNumber *w in allStocks)
+        
+        //iterate through it
+        
+        for (BNRStockHolding *count in allStocks)
         {
-            NSLog(@"$%.02f, $%.02f, $%.02f", [allStocks[count] purchaseSharePrice],[allStocks[count] numberOfShare], [allStocks[count] currentSharePrice]);
-            int totalCost = [allStocks[count] purchaseSharePrice]*[allStocks[count] numberOfShare];
+            
+            NSLog(@"$%.02f, $%.02f, $%.02f", [count purchaseSharePrice],[count numberOfShare], [count currentSharePrice]);
+            int totalCost = [count purchaseSharePrice]*[count numberOfShare];
             NSLog(@"The total cost of your aquisition is $%i", totalCost);
-            count = count +1;
+            
+            
+            
         }
         
     }
