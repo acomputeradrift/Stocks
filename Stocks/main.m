@@ -35,12 +35,11 @@ int main(int argc, const char * argv[]) {
         
         //iterate through it
         
-        for (BNRStockHolding *count in allStocks)
+        for (BNRStockHolding *eachStock in allStocks)
         {
             
-            NSLog(@"$%.02f, $%.02f, $%.02f", [count purchaseSharePrice],[count numberOfShare], [count currentSharePrice]);
-            int totalCost = [count purchaseSharePrice]*[count numberOfShare];
-            NSLog(@"The total cost of your aquisition is $%i", totalCost);
+            NSLog(@"$%.02f, $%.02f, $%.02f", [eachStock purchaseSharePrice],[eachStock numberOfShare], [eachStock currentSharePrice]);
+            NSLog(@"The total cost of your aquisition is $%.2f and your total value today is $%.2f", [eachStock costInDollars], [eachStock valueInDollars]);
             
             
             

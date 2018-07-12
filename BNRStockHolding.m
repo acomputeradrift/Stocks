@@ -35,13 +35,15 @@
     _numberOfShare= n;
 }
 
-- (float)costInDollars;  // purchaseSharePrice * numberOfShares
+- (float)costInDollars  // purchaseSharePrice * numberOfShares
 {
-    return _purchaseSharePrice * _numberOfShare;
+    //return _purchaseSharePrice * _numberOfShare;
+    return [self purchaseSharePrice] * [self numberOfShare];
 }
-- (float)valueInDollars; // currentSharePrice * numberOfShares
+- (float)valueInDollars // currentSharePrice * numberOfShares
 {
-    return _currentSharePrice * _numberOfShare;
+    //return _currentSharePrice * _numberOfShare;
+    return [self currentSharePrice] * [self numberOfShare];
 }
 // - (NSString*) description
 //{

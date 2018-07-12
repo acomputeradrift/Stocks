@@ -21,6 +21,8 @@ int _numberOfShare;
 - (float)purchaseSharePrice;
 - (float)currentSharePrice;
 - (float)numberOfShare;
+- (float)costInDollars;
+- (float)valueInDollars;
 
 // setter methods
 
