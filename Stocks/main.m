@@ -33,7 +33,9 @@ int main(int argc, const char * argv[]) {
         int count = 0;
         for (NSNumber *w in allStocks)
         {
-            NSLog(@"%f, %f, %f", [allStocks[count] purchaseSharePrice],[allStocks[count] numberOfShare], [allStocks[count] currentSharePrice]);
+            NSLog(@"$%.02f, $%.02f, $%.02f", [allStocks[count] purchaseSharePrice],[allStocks[count] numberOfShare], [allStocks[count] currentSharePrice]);
+            int totalCost = [allStocks[count] purchaseSharePrice]*[allStocks[count] numberOfShare];
+            NSLog(@"The total cost of your aquisition is $%i", totalCost);
             count = count +1;
         }
         
